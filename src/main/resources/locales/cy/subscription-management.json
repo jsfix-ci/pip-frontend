@@ -1,0 +1,22 @@
+{
+  "title": "",
+  "header": "",
+  "newButton": "",
+  "subNavigation": {
+    "header1": "",
+    "header2": "",
+    "header3": ""
+  },
+  "noSubs": "",
+  "noSubsCase": "",
+  "noSubsCourt": "",
+  "table": {
+    "header1": "",
+    "header2": "",
+    "date": "",
+    "actions": ""
+  },
+  "courtTable": {
+    "header1": ""
+  }
+}

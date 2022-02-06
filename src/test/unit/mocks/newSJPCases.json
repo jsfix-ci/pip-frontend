@@ -1,0 +1,51 @@
+{
+  "Hearing": [
+    {
+      "Party": [
+        {
+          "PartyRole": {
+            "Title": "Accused",
+            "IndividualDetails": "M Mcneillfake",
+            "Address": "BD17",
+            "OrganisationDetails": ""
+          }
+        },
+        {
+          "PartyRole": {
+            "Title": "Prosecutor",
+            "IndividualDetails": "",
+            "Address": "BD17",
+            "OrganisationDetails": "TV Licensing"
+          }
+        }
+      ],
+      "Offence": {
+        "offenceTitle": "Use / install a television set without a licence"
+      }
+    },
+    {
+      "Party": [
+        {
+          "PartyRole": {
+            "Title": "Accused",
+            "IndividualDetails": "M BridgetFace",
+            "Address": "BD19",
+            "OrganisationDetails": "MoJ"
+          }
+        },
+        {
+          "PartyRole": {
+            "Title": "Leader",
+            "IndividualDetails": "",
+            "Address": "BD17",
+            "OrganisationDetails": "TV Licensing"
+          }
+        }
+      ],
+      "Offence": {
+        "offenceTitle": "Use / install a television set without a licence"
+      }
+    }
+
+  ]
+}

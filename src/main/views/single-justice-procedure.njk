@@ -14,29 +14,24 @@
   <p class="govuk-body govuk-!-font-weight-bold">{{ p1 }}</p>
   <p class="govuk-body">{{ p2 }} {{ published }}</p>
   <div class="parent-box">
+
   {% set sjpCase = [] %}
   {% for item in casesList |sort(attribute="Name")%}
     {% set _ = sjpCase.push([
       {
-        text: item.provenance
+        text: item.Party[0].PartyRole.Title
       },
       {
-        text: item.sourceArtefactId
+        text: item.Party[0].PartyRole.IndividualDetails
       },
       {
-        text: item.contentDate
+        text: item.Party[0].PartyRole.Address
       },
       {
-        html: "<a href=read-publication&artefactId="+item.artefactId+">Link</a>"
+        text: item.Party[0].PartyRole.OrganisationDetails
       },
       {
-        text: item.isFlatFile
-      },
-      {
-        text: item.sensitivity
-      },
-      {
-        text: item.type
+        text: item.Offence.offenceTitle
       }
     ]) %}
   {% endfor %}

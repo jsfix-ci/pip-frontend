@@ -119,6 +119,7 @@ export default function(app: Application): void {
 
   //TODO: To be deleted/modified post UAT with suitable solution
   app.get('/summary-of-publications', app.locals.container.cradle.summaryOfPublicationsController.get);
+  app.get('/sjpPublication', app.locals.container.cradle.sJPListController.get);
   app.get('/warned-list', app.locals.container.cradle.warnedListController.get);
   app.get('/standard-list', ensureAuthenticated, app.locals.container.cradle.standardListController.get);
 

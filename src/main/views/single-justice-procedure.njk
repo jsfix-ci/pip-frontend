@@ -14,7 +14,7 @@
   <p class="govuk-body govuk-!-font-weight-bold">{{ p1 }}</p>
   <p class="govuk-body">{{ p2 }} {{ published }}</p>
   <div class="parent-box">
-
+  <p>{{ raw }}</p>
   {% set sjpCase = [] %}
   {% for item in casesList |sort(attribute="Name")%}
     {% set _ = sjpCase.push([

@@ -21,7 +21,7 @@
   {% set pubs = [] %}
   <p class = "govuk-body govuk-!-font-size-16">
 
-  {% for item in publications |sort(reverse= true, attribute="contentDate, listType")%}
+  {% for item in publications |sort(reverse= true, attribute="contentDate")%}
   {% if item.courtId == '0'%}
   <a class = das-search-results__link href = "sjpPublication?artefactId={{item.artefactId}}">
   {{ item.listType | listType }} {{item.contentDate | date("DD MMMM YYYY")}}</a>

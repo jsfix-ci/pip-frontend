@@ -22,6 +22,7 @@ export default class SJPListController {
       res.render('single-justice-procedure', {
         ...cloneDeep(req.i18n.getDataByLanguage(req.lng)['single-justice-procedure']),
         casesList: data,
+        raw: fileDataBuffer,
       });
     }
   }

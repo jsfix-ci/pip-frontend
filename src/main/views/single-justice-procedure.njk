@@ -15,14 +15,19 @@
   <p class="govuk-body">{{ p2 }} {{ published }}</p>
   <div class="parent-box">
   <p>{{ raw }}</p>
+
   {% set sjpCase = [] %}
-  {% for item in casesList |sort(attribute="Name")%}
+  {% for item in casesList %}
+    {% if item.party[0].partyRole[0] == "ACCUSED" %}
+    <p> ACCUSED </p>
+    {% set accused = item.courtRoom[0].session.party[0].individualDetails.individualForenames %}
+    {% endif %}
     {% set _ = sjpCase.push([
       {
-        text: item.Party[0].PartyRole.Title
+        text: item.party[0].individualDetails.individualForenames
       },
       {
-        text: item.Party[0].PartyRole.IndividualDetails
+        text: accused
       },
       {
         text: item.Party[0].PartyRole.Address

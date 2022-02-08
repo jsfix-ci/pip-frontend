@@ -18,11 +18,12 @@ export default class SJPListController {
       res.send(fileDataBuffer);
     } else {
       console.log(fileDataBuffer.toString());
-      const data = JSON.parse(fileDataBuffer.toString()).Hearing;
+      const data = JSON.parse(fileDataBuffer.toString());
+
       res.render('single-justice-procedure', {
         ...cloneDeep(req.i18n.getDataByLanguage(req.lng)['single-justice-procedure']),
-        casesList: data,
-        raw: fileDataBuffer,
+        casesList: data.courtLists[0].courtHouse,
+        raw: JSON.stringify(data.courtLists[0].courtHouse),
       });
     }
   }

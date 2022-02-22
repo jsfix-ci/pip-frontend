@@ -133,8 +133,7 @@
                       <div id="{{ key }}" class="govuk-!-font-size-27">{{ key }}</div>
                     </th>
                   {% else %}
-                    <th scope="row" class="govuk-table__header">
-                    </th>
+                    <th scope="row" class="govuk-table__header" aria-hidden="true"></th>
                   {% endif %}
                   <td class="govuk-table__cell">
                     <a href="/list-option?courtId={{ courtDetails.id }}" class="govuk-link">{{ courtName }}</a>

@@ -120,7 +120,7 @@
               <div class="moj-filter__selected-heading">
 
                 <div class="moj-filter__heading-title">
-                  <h2 class="govuk-heading-m">{{ selectedFilter }}</h2>
+                  <h3 class="govuk-heading-m">{{ selectedFilter }}</h3>
                 </div>
 
                 <div class="moj-filter__heading-action">
@@ -212,38 +212,38 @@
         <a href="/summary-of-publications?courtId=0" class="govuk-link govuk-!-margin-left-8 govuk-!-font-size-19"
            id="sjp-link">{{ sjpLink }}</a>
       </div>
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" colspan="2">{{ tableHeader1 }}</th>
-        </tr>
-        </thead>
+      <dl class="govuk-table">
+        <dt class="govuk-table__head">
+        <dt class="govuk-table__row">
+          <dt scope="col" class="govuk-table__header" colspan="2">{{ tableHeader1 }}</dt>
+        </dt>
+        </dt>
         <tbody class="govuk-table__body">
         {% for key, value in courtList %}
           {% if value | length > 0 %}
             {% for courtName, courtDetails in value %}
               {% if courtDetails.id > 0 %}
-                <tr class="govuk-table__row">
+                <dt class="govuk-table__row">
                   {% if first != key %}
                     {% set first = key %}
-                    <th scope="row" class="govuk-table__header">
+                    <dt scope="row" class="govuk-table__header">
                       <div id="{{ key }}" class="govuk-!-font-size-27">{{ key }}</div>
-                    </th>
+                    </dt>
                   {% else %}
-                    <th scope="row" class="govuk-table__header">
-                    </th>
+                    <dt scope="row" class="govuk-table__header">
+                    </dt>
                   {% endif %}
-                  <td class="govuk-table__cell">
+                  <dd class="govuk-table__cell">
                     <a href="/summary-of-publications?courtId={{ courtDetails.id }}" class="govuk-link">{{ courtName }}</a>
-                  </td>
-                </tr>
+                  </dd>
+                </dt>
               {% endif %}
             {% endfor %}
             {% set first = '' %}
           {% endif %}
         {% endfor %}
         </tbody>
-      </table>
+      </dl>
       {{ backToTopButton() }}
     </div>
   </div>
